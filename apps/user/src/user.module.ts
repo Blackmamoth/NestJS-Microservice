@@ -3,13 +3,14 @@ import { UserController } from './user.controller';
 import { UserService } from './user.service';
 import { User, UserSchema } from '@app/shared/model/user/user.model';
 import { MongooseModule } from '@nestjs/mongoose';
+import GlobalConstants from '@app/shared/common/constants';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://root:pass@localhost:27017'),
+    MongooseModule.forRoot(`mongodb://${GlobalConstants.MONGO_USER}:${GlobalConstants.MONGO_PASS}@localhost:27017`),
     MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
   ],
   controllers: [UserController],
   providers: [UserService],
 })
-export class UserModule {}
+export class UserModule { }
