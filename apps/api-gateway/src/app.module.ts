@@ -42,4 +42,4 @@ import { CacheModule } from '@nestjs/cache-manager';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule { }
+export class AppModule {}
