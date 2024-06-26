@@ -32,6 +32,19 @@
 $ npm install
 ```
 
+## Run the mongodb container before starting the application
+
+### A docker container of mongodb
+
+```bash
+$ docker compose up -d # start the mongodb container
+
+$ docker compose down # stop the mongodb container
+
+```
+
+### If not using this mongodb container change the mongodb user and password in `/libs/shared/src/common/constants.ts` accordingly
+
 ## Running the app
 
 ```bash
@@ -62,6 +75,18 @@ $ npm run start:auth:prod
 $ npm run start:user:prod
 
 $ npm run start:block:prod
+
+
+# Start all services and the api gateway concurrently
+
+$ npm run start:all:debug
+
+$ npm run start:all:dev
+
+# Build application using `npm run build:all` before running the following command
+
+$ npm run start:all:prod
+
 ```
 
 ## Test
@@ -76,17 +101,3 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
