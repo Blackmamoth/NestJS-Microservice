@@ -38,11 +38,30 @@ $ npm install
 # development
 $ npm run start
 
+$ npm run start:auth
+
+$ npm run start:user
+
+$ npm run start:block
+
 # watch mode
 $ npm run start:dev
 
+$ npm run start:auth:dev
+
+$ npm run start:user:dev
+
+$ npm run start:block:dev
+
+
 # production mode
 $ npm run start:prod
+
+$ npm run start:auth:prod
+
+$ npm run start:user:prod
+
+$ npm run start:block:prod
 ```
 
 ## Test
